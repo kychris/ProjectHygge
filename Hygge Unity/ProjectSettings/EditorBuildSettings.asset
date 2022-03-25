@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HandMenuExamples 1.unity
     guid: 25950f6f3d8944ffa84758fad8e8996f
+  - enabled: 1
+    path: Assets/Scenes/_MeetingRoom_destiny.unity
+    guid: b9f0eabdc079a4a888fdfc38b66aa4f0
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 72bfa860ccfee44ff8bc959d1b9afe13, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 802652c7fc6de410a935dff331503462, type: 2}
