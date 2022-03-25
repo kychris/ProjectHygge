@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 514da61389c049c0bdaf31b7f6970d33
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - platformModelMaterial: {instanceID: 0}
+  - globalLeftControllerModel: {fileID: 1370450866519632, guid: 626257b1a6cd47c2a32a18cf75b2fb23, type: 3}
+  - globalRightControllerModel: {fileID: 1760394390528354, guid: 9ef0df44319c4fb4a05649e5b8ceb6d1, type: 3}
+  - globalLeftHandVisualizer: {instanceID: 0}
+  - globalRightHandVisualizer: {instanceID: 0}
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 4f9f54f9478441228dea18a2c828cfc6, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
