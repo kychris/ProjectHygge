@@ -14743,6 +14743,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1301180331}
+  - component: {fileID: 1301180332}
   m_Layer: 0
   m_Name: EventControllerTest
   m_TagString: Untagged
@@ -14764,6 +14765,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1301180332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301180330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504e85bed9a72418e9c7729d3585648b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors: []
+  light: {fileID: 0}
+  colorIndex: 0
+  plants: []
+  animals: []
+  scaleObjects:
+  - {fileID: 8490727555880500106}
+  scales: {x: 2, y: 1, z: 1}
 --- !u!1 &1304370537
 GameObject:
   m_ObjectHideFlags: 0

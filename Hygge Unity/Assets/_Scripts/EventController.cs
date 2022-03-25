@@ -15,6 +15,14 @@ public class EventController : MonoBehaviour
     private bool plantsEnabled = true;
     private bool animalsEnabled = true;
 
+    [Header("Scale Objects")]
+    public GameObject[] scaleObjects;
+    public Vector3 scales;
+    private bool xScaled = false;
+    private bool yScaled = false;
+    private bool zScaled = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +59,66 @@ public class EventController : MonoBehaviour
         {
             animals[i].SetActive(!animalsEnabled);
             animalsEnabled = !animalsEnabled;
+        }
+    }
+
+    [ContextMenu("Scale/Unscale x")]
+    void ScaleUnscaleX()
+    {
+        for (int i = 0; i < scaleObjects.Length; i++)
+        {
+            Vector3 initialScale = scaleObjects[i].transform.localScale;
+
+            if (!xScaled)
+            {
+                scaleObjects[i].transform.localScale = new Vector3(scales[0], initialScale.y, initialScale.z);
+                xScaled = true;
+            }
+            else
+            {
+                scaleObjects[i].transform.localScale = new Vector3(1, initialScale.y, initialScale.z);
+                xScaled = false;
+            }
+        }
+    }
+
+    [ContextMenu("Scale/Unscale y")]
+    void ScaleUnscaleY()
+    {
+        for (int i = 0; i < scaleObjects.Length; i++)
+        {
+            Vector3 initialScale = scaleObjects[i].transform.localScale;
+
+            if (!yScaled)
+            {
+                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, scales[1], initialScale.z);
+                yScaled = true;
+            }
+            else
+            {
+                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, 1, initialScale.z);
+                yScaled = false;
+            }
+        }
+    }
+
+    [ContextMenu("Scale/Unscale z")]
+    void ScaleUnscaleZ()
+    {
+        for (int i = 0; i < scaleObjects.Length; i++)
+        {
+            Vector3 initialScale = scaleObjects[i].transform.localScale;
+
+            if (!zScaled)
+            {
+                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, initialScale.y, scales[2]);
+                zScaled = true;
+            }
+            else
+            {
+                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, initialScale.y, 1);
+                zScaled = false;
+            }
         }
     }
 
