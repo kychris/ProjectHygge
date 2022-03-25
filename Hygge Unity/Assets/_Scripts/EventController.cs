@@ -76,7 +76,7 @@ public class EventController : MonoBehaviour
             }
             else
             {
-                scaleObjects[i].transform.localScale = new Vector3(1, initialScale.y, initialScale.z);
+                scaleObjects[i].transform.localScale = new Vector3(10000, initialScale.y, initialScale.z);
                 xScaled = false;
             }
         }
@@ -96,7 +96,7 @@ public class EventController : MonoBehaviour
             }
             else
             {
-                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, 1, initialScale.z);
+                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, 10000, initialScale.z);
                 yScaled = false;
             }
         }
@@ -116,7 +116,7 @@ public class EventController : MonoBehaviour
             }
             else
             {
-                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, initialScale.y, 1);
+                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, initialScale.y, 10000);
                 zScaled = false;
             }
         }
