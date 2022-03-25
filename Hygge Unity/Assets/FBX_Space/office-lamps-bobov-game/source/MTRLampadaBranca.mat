@@ -10,7 +10,7 @@ Material:
   m_Name: MTRLampadaBranca
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
-  m_LightmapFlags: 1
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
@@ -75,5 +75,5 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 0.75844157, g: 0.75844157, b: 0.75844157, a: 0.64935064}
-    - _EmissionColor: {r: 0.83766234, g: 0.83766234, b: 0.83766234, a: 1}
+    - _EmissionColor: {r: 908.07544, g: 38.550358, b: 38.550358, a: 1}
   m_BuildTextureStacks: []
