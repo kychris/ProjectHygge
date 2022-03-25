@@ -4,7 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandInteractionExamples.unity
+    guid: 3dd4a396b5225f8469b9a1eb608bfa57
+  - enabled: 0
+    path: Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandMenuExamples.unity
+    guid: 2792ec9767804e644906ab978f2eed23
+  - enabled: 0
+    path: Assets/Scenes/_MeetingRoom.unity
+    guid: feceb39edca32464f910b0f08f97f510
+  - enabled: 0
+    path: Assets/Scenes/HandMenuExamples 1.unity
+    guid: 25950f6f3d8944ffa84758fad8e8996f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 72bfa860ccfee44ff8bc959d1b9afe13, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 802652c7fc6de410a935dff331503462, type: 2}
