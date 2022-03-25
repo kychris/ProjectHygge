@@ -14780,11 +14780,23 @@ MonoBehaviour:
   colors: []
   light: {fileID: 0}
   colorIndex: 0
-  plants: []
+  plants:
+  - {fileID: 1340222783}
   animals: []
-  scaleObjects:
-  - {fileID: 8490727555880500106}
-  scales: {x: 2, y: 1, z: 1}
+  furnitures:
+  - {fileID: 8201449250681072191}
+  rooms:
+  - {fileID: 6581699235594147614}
+  - {fileID: 1507554876}
+  - {fileID: 616369461}
+  roomIndex: 0
+  materialObjects:
+  - {fileID: 124041675}
+  materials:
+  - {fileID: 2100000, guid: 8d1e7eaab559e428a8417ce3f6d59b8a, type: 2}
+  - {fileID: 2100000, guid: ee13739577afe418baa7f55646c9ed14, type: 2}
+  - {fileID: 2100000, guid: 95099d72869a54f6b90ff8edc9686ceb, type: 2}
+  materialIndex: 0
 --- !u!1 &1304370537
 GameObject:
   m_ObjectHideFlags: 0

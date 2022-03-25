@@ -1,39 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventController : MonoBehaviour
 {
-    [Space(10)]
+    [Header("----------------------------------------")]
     public Material[] colors;
     public Light light;
     public int colorIndex = 0;
 
-    [Header("Creatures")]
+    [Header("----------------------------------------")]
     public GameObject[] plants;
     public GameObject[] animals;
+    public GameObject[] furnitures;
     private bool plantsEnabled = true;
     private bool animalsEnabled = true;
+    private bool furnituresEnabled = true;
 
-    [Header("Scale Objects")]
-    public GameObject[] scaleObjects;
-    public Vector3 scales;
-    private bool xScaled = false;
-    private bool yScaled = false;
-    private bool zScaled = false;
+    [Header("----------------------------------------")]
+    public GameObject[] rooms;
+    public int roomIndex;
 
+    [Header("----------------------------------------")]
+    public GameObject[] materialObjects;
+    public Material[] materials;
+    public int materialIndex = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    // [Header("----------------------------------------")]
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     [ContextMenu("Change Color")]
     void ChangeColor()
@@ -62,65 +59,43 @@ public class EventController : MonoBehaviour
         }
     }
 
-    [ContextMenu("Scale/Unscale x")]
-    void ScaleUnscaleX()
+    [ContextMenu("Show/Hide furnitures")]
+    void ShowHideFurnitures()
     {
-        for (int i = 0; i < scaleObjects.Length; i++)
+        for (int i = 0; i < furnitures.Length; i++)
         {
-            Vector3 initialScale = scaleObjects[i].transform.localScale;
-
-            if (!xScaled)
-            {
-                scaleObjects[i].transform.localScale = new Vector3(scales[0], initialScale.y, initialScale.z);
-                xScaled = true;
-            }
-            else
-            {
-                scaleObjects[i].transform.localScale = new Vector3(10000, initialScale.y, initialScale.z);
-                xScaled = false;
-            }
+            furnitures[i].SetActive(!furnituresEnabled);
+            furnituresEnabled = !furnituresEnabled;
         }
     }
 
-    [ContextMenu("Scale/Unscale y")]
-    void ScaleUnscaleY()
+    [ContextMenu("Change room")]
+    void ChangeRoom()
     {
-        for (int i = 0; i < scaleObjects.Length; i++)
+        for (int i = 0; i < rooms.Length; i++)
         {
-            Vector3 initialScale = scaleObjects[i].transform.localScale;
-
-            if (!yScaled)
-            {
-                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, scales[1], initialScale.z);
-                yScaled = true;
-            }
-            else
-            {
-                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, 10000, initialScale.z);
-                yScaled = false;
-            }
+            rooms[i].SetActive(false);
         }
+        roomIndex += 1;
+        roomIndex = roomIndex % rooms.Length;
+        rooms[roomIndex].SetActive(true);
     }
 
-    [ContextMenu("Scale/Unscale z")]
-    void ScaleUnscaleZ()
+    [ContextMenu("Change Material")]
+    void ChangeMaterial()
     {
-        for (int i = 0; i < scaleObjects.Length; i++)
+        for (int i = 0; i < materialObjects.Length; i++)
         {
-            Vector3 initialScale = scaleObjects[i].transform.localScale;
-
-            if (!zScaled)
-            {
-                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, initialScale.y, scales[2]);
-                zScaled = true;
-            }
-            else
-            {
-                scaleObjects[i].transform.localScale = new Vector3(initialScale.x, initialScale.y, 10000);
-                zScaled = false;
-            }
+            materialObjects[i].GetComponent<MeshRenderer>().material = materials[materialIndex];
         }
+        materialIndex += 1;
+        materialIndex = materialIndex % 3;
     }
 
-
+    [ContextMenu("Reset")]
+    void ResetScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
 }
