@@ -9,7 +9,7 @@ public class OnOffHandMenu : MonoBehaviour
 {
     public GameObject moodUI;
     public bool activeMoodUI = true;
-    [SerializeField] ActionBasedController actionBasedController;
+    //[SerializeField] ActionBasedController actionBasedController;
 
 
     // Start is called before the first frame update
@@ -17,9 +17,7 @@ public class OnOffHandMenu : MonoBehaviour
     {
         DisplayMoodUI();
 
-        actionBasedController.selectAction.action.performed += PressTrigger;
-        
-
+        //actionBasedController.selectAction.action.performed += PressTrigger;
     }
 
     public void PressTrigger(InputAction.CallbackContext context)
