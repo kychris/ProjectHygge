@@ -65,8 +65,8 @@ public class EventController : MonoBehaviour
         for (int i = 0; i < plants.Length; i++)
         {
             plants[i].SetActive(!plantsEnabled);
-            plantsEnabled = !plantsEnabled;
         }
+        plantsEnabled = !plantsEnabled;
     }
 
     [ContextMenu("Show/Hide animals")]
@@ -75,8 +75,8 @@ public class EventController : MonoBehaviour
         for (int i = 0; i < animals.Length; i++)
         {
             animals[i].SetActive(!animalsEnabled);
-            animalsEnabled = !animalsEnabled;
         }
+        animalsEnabled = !animalsEnabled;
     }
 
     [ContextMenu("Show/Hide furnitures")]
@@ -85,8 +85,8 @@ public class EventController : MonoBehaviour
         for (int i = 0; i < furnitures.Length; i++)
         {
             furnitures[i].SetActive(!furnituresEnabled);
-            furnituresEnabled = !furnituresEnabled;
         }
+        furnituresEnabled = !furnituresEnabled;
     }
 
     [ContextMenu("Change room")]
