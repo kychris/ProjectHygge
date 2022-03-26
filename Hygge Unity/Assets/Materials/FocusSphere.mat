@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OuterSphere
+  m_Name: FocusSphere
   m_Shader: {fileID: -6465566751694194690, guid: 75e9cde58f9c1454a8879f741fcf7ce1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -85,8 +85,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_09148a45b773494299fcc2741e9a09f5: 2
-    - Vector1_1f787f1ddcd14c8bb8d7da618eb8b52b: 0.1
-    - Vector1_3c3d15ebc2104902850f2649a0fb480a: 0.11
+    - Vector1_1f787f1ddcd14c8bb8d7da618eb8b52b: 0.2
+    - Vector1_3c3d15ebc2104902850f2649a0fb480a: 0.01
     - Vector1_508bcc5fb44f4c4dac9253609b0059b1: 0.08
     - Vector1_8a407335ac0642fa807a0ee6e07634fc: 0
     - Vector1_9c20c24612294a10ab424fadb8bf3415: 1.59
@@ -94,7 +94,7 @@ Material:
     - Vector1_b8754676e52c4494a99c80700ef5be88: 0.1
     - Vector1_e2354f8abcfd4b499662af0c62cb2ab0: 0.475
     - Vector1_eb75c3a41d4f472d822d3d2014948585: 3.12
-    - Vector1_ec7656ba5e034545b5e623c3e826f076: 1.39
+    - Vector1_ec7656ba5e034545b5e623c3e826f076: 0.4
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -123,8 +123,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_a0a4526bf489438bae469d7a6a297d96: {r: 0, g: 0, b: 0, a: 0}
-    - Color_d4577119fb9f45e7a112d1a1e8dad00e: {r: 0.35294122, g: 0.3639171, b: 0.8862745, a: 0}
-    - Color_e6c68507800043478d7c3417052a3e82: {r: 0.3764706, g: 0.12164732, b: 0.09411765, a: 0}
+    - Color_d4577119fb9f45e7a112d1a1e8dad00e: {r: 0.35294122, g: 0.47394747, b: 0.8862745, a: 0}
+    - Color_e6c68507800043478d7c3417052a3e82: {r: 0.09015872, g: 0.509434, b: 0.059594143, a: 0}
     - Vector2_dda1e297b0f346e589414a282a08bead: {r: 0.1, g: 0.1, b: 0, a: 0}
     - Vector3_947f4072efc448fb891f54998c3f414e: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
