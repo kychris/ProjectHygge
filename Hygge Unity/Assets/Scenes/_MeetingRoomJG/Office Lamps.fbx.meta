@@ -1,12 +1,59 @@
 fileFormatVersion: 2
-guid: 0a074ca88e8904e72a1040b43b0decb7
+guid: a993d7a0c411e451494578c1d1c63bd2
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
+  internalIDToNameTable: []
+  externalObjects:
   - first:
-      74: 1827226128182048838
-    second: Take 001
-  externalObjects: {}
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRLampadaBranca
+    second: {fileID: 2100000, guid: 488d9be915ee6462690049e98a671b6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRMetalAluminio
+    second: {fileID: 2100000, guid: a008fc082d42c4230b868baa7611c254, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRMetalBranco
+    second: {fileID: 2100000, guid: 4d4c12a53f8204222b1eb5828f334995, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRMetalBronzeado
+    second: {fileID: 2100000, guid: 071b9ab62e23a44bcb0a1ed6de1a55f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRMetalCarbono
+    second: {fileID: 2100000, guid: d10b42c9df12b4767b6c1ced66ec3efe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRMetalCinza
+    second: {fileID: 2100000, guid: bb4fc8bc848584a65a7966aa26a8af62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRMetalEspelhado
+    second: {fileID: 2100000, guid: 3848f6a3936a14401924df7f62fe5779, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRMetalPreto
+    second: {fileID: 2100000, guid: ee21ab2e0583a4e8bbf894881f7b61bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRPlasticoPreto
+    second: {fileID: 2100000, guid: 74d62700df50b4aecba686d75d244f20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MTRPlasticoVermelho
+    second: {fileID: 2100000, guid: ca7645b5ddc534e89bb543b3f42fe4e5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
