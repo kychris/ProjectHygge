@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 //using UnityEditor.EditorTools;
 //using UnityEditor.Rendering;
+using UnityEngine.XR.Interaction.Toolkit;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -47,6 +48,17 @@ public class EventController : MonoBehaviour
         ToggleNoWindowWalls();
     }
 
+    [SerializeField] GameObject room;
+    [SerializeField] GameObject canvas;
+    [SerializeField] GameObject hand;
+
+    [ContextMenu("Toggle Room/Canvas")]
+    void startRoomActivity()
+    {
+        room.SetActive(true);
+        canvas.GetComponent<Canvas>().enabled = false;
+        hand.GetComponent<XRInteractorLineVisual>().enabled = false;
+    }
 
     [ContextMenu("Change Color")]
     void ChangeColor()
