@@ -23,7 +23,7 @@ public class EventController : MonoBehaviour
 
     [Header("----------------------------------------")]
     public GameObject[] rooms;
-    public int roomIndex;
+    public int roomIndex = 3;
 
     [Header("----------------------------------------")]
     public GameObject[] materialObjects;
@@ -33,8 +33,19 @@ public class EventController : MonoBehaviour
     [Header("----------------------------------------")]
     public GameObject[] noWindowWalls;
     public GameObject[] windowWalls;
-    private bool noWindowWallsEnabled = true;
-    private bool windowWallsEnabled = false;
+    private bool noWindowWallsEnabled = false;
+    private bool windowWallsEnabled = true;
+
+    public void Start() 
+    {
+        roomIndex = rooms.Length - 1;
+        ChangeRoom();
+        TogglePlants();
+        ToggleFurnitures();
+        ChangeRoom();
+        ToggleWindowWalls();
+        ToggleNoWindowWalls();
+    }
 
 
     [ContextMenu("Change Color")]
@@ -49,7 +60,7 @@ public class EventController : MonoBehaviour
     }
 
     [ContextMenu("Show/Hide plants")]
-    void ShowHidePlants()
+    void TogglePlants()
     {
         for (int i = 0; i < plants.Length; i++)
         {
@@ -59,7 +70,7 @@ public class EventController : MonoBehaviour
     }
 
     [ContextMenu("Show/Hide animals")]
-    void ShowHideAnimals()
+    void ToggleAnimals()
     {
         for (int i = 0; i < animals.Length; i++)
         {
@@ -69,7 +80,7 @@ public class EventController : MonoBehaviour
     }
 
     [ContextMenu("Show/Hide furnitures")]
-    void ShowHideFurnitures()
+    void ToggleFurnitures()
     {
         for (int i = 0; i < furnitures.Length; i++)
         {
