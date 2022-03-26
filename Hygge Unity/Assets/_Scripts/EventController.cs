@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EditorTools;
 //using UnityEditor.Rendering;
 
 using UnityEngine;
@@ -29,7 +30,11 @@ public class EventController : MonoBehaviour
     public Material[] materials;
     public int materialIndex = 0;
 
-    // [Header("----------------------------------------")]
+    [Header("----------------------------------------")]
+    public GameObject[] noWindowWalls;
+    public GameObject[] windowWalls;
+    private bool noWindowWallsEnabled = true;
+    private bool windowWallsEnabled = false;
 
 
     [ContextMenu("Change Color")]
@@ -102,4 +107,27 @@ public class EventController : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
+
+    [ContextMenu("Toggle no window walls")]
+    void ToggleNoWindowWalls()
+    {
+        for (int i = 0; i < noWindowWalls.Length; i++)
+        {
+            noWindowWalls[i].SetActive(!noWindowWallsEnabled);
+        }
+        noWindowWallsEnabled = !noWindowWallsEnabled;
+    }
+
+    [ContextMenu("Toggle window walls")]
+    void ToggleWindowWalls()
+    {
+        for (int i = 0; i < windowWalls.Length; i++)
+        {
+            windowWalls[i].SetActive(!windowWallsEnabled);
+        }
+        windowWallsEnabled = !windowWallsEnabled;
+
+    }
 }
+
+
