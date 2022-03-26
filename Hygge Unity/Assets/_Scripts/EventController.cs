@@ -9,7 +9,7 @@ public class EventController : MonoBehaviour
 {
     [Header("----------------------------------------")]
     public Material[] colors;
-    public Light light;
+    public Light[] lights;
     public int colorIndex = 0;
 
     [Header("----------------------------------------")]
@@ -35,6 +35,10 @@ public class EventController : MonoBehaviour
     [ContextMenu("Change Color")]
     void ChangeColor()
     {
+        for (int i = 0; i < lights.Length; i++) 
+        {
+            lights[i].color = colors[colorIndex].color;
+        }
         colorIndex += 1;
         colorIndex = colorIndex % 3;
     }
